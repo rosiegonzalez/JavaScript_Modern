@@ -28,6 +28,6 @@ const countNumbers = (array) => {
 
 const main = async () => {
     ex1();
-}
+ }
 
 main();
