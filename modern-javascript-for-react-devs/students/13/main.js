@@ -7,7 +7,6 @@ const ex1 = () => {
     const array = [1, '2', 3, 'test', 1.2];
     console.log(countNumbers(array));
 }
-
 const ex2 = () => {
     // TODO...
 }
@@ -21,9 +20,12 @@ const ex3 = () => {
 //
 
 const countNumbers = (array) => {
-    let retval = 0;
+    let numberCounter = 0;
     // TODO...
-    return retval;
+    for (let i = 0; i < array.length; i++) {
+        if (typeof(array[i]) === 'number') numberCounter++;
+    }
+    return numberCounter;
 }
 
 const main = async () => {
@@ -31,3 +33,4 @@ const main = async () => {
 }
 
 main();
+
