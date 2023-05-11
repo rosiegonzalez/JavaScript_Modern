@@ -93,3 +93,22 @@ console.log(interleave(arr1, arr2));
 // };
 
 // main();
+
+// Example 4 ----------------------------------------------------------------------------------------------------------------------------
+
+const palindrome = (str) => { 
+    const length = str.length;
+
+    for (let i = 0; i < Math.floor(length / 2); i++){
+
+        if (str[i] == str[length - 1 -i]) {
+            
+            return true;
+        }
+    }
+        return false;
+    
+};
+
+console.log(palindrome('radar'));
+console.log(palindrome('month'));
