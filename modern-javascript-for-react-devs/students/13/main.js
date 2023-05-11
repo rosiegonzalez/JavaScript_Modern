@@ -48,38 +48,38 @@
 // // Exercise 2
 
 // const minNumber = (arr) => {
-//     let min= arr[0];
+// //     let min= arr[0];
 
-//     for(let i = 1; i < arr.length; i++) {
-//         if (min > arr[i])
-//             min = arr[i]
+// //     for(let i = 1; i < arr.length; i++) {
+// //         if (min > arr[i])
+// //             min = arr[i]
+// //     }
+
+// //     return min
+// // };
+
+// // Exercise 3
+
+// const interleave = (arr1, arr2) => {
+
+//     if ( arr1.length !== arr2.length) {
+//         return 'Error: Array length mismatch';
 //     }
 
-//     return min
+//     let result = '';
+
+//     for ( let i = 0; i < arr1.length; i++) {
+//         result += arr1[i] + arr2[i];
+
+//     }
+
+//     return result;
 // };
 
-// Exercise 3
 
-const interleave = (arr1, arr2) => {
-
-    if ( arr1.length !== arr2.length) {
-        return 'Error: Array length mismatch';
-    }
-
-    let result = '';
-
-    for ( let i = 0; i < arr1.length; i++) {
-        result += arr1[i] + arr2[i];
-
-    }
-
-    return result;
-};
-
-
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = ['a', 'b', 'c', 'd', 'e'];
-console.log(interleave(arr1, arr2));
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = ['a', 'b', 'c', 'd', 'e'];
+// console.log(interleave(arr1, arr2));
 
 
 
@@ -96,19 +96,36 @@ console.log(interleave(arr1, arr2));
 
 // Example 4 ----------------------------------------------------------------------------------------------------------------------------
 
-const palindrome = (str) => { 
-    const length = str.length;
+// const palindrome = (str) => { 
+//     const length = str.length;
 
-    for (let i = 0; i < Math.floor(length / 2); i++){
+//     for (let i = 0; i < Math.floor(length / 2); i++){
 
-        if (str[i] == str[length - 1 -i]) {
+//         if (str[i] == str[length - 1 -i]) {
             
-            return true;
-        }
-    }
-        return false;
+//             return true;
+//         }
+//     }
+//         return false;
     
-};
+// };
 
-console.log(palindrome('radar'));
-console.log(palindrome('month'));
+// console.log(palindrome('radar'));
+// console.log(palindrome('month'));
+
+// Example # 5 --------------------------------
+
+let str = "today this is a this is a this is a test.";
+const word = 'this';
+
+let count = 0;
+const words = str.split(' ');
+
+for (let i = 0; i < words.length; i++) {
+    if (words[i] === word) {
+        count++;
+    }
+
+}
+
+console.log(`"${word}" appears ${count} times`);
